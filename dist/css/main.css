@@ -2,10 +2,26 @@
 
 body{background:lightgray}
 
-.container{width:100%;
-           max-width: 1000px;
+.background{width:100%;
+           max-width: 1600px;
            height:2000px; 
            background: black url('../images/background_elements/combinedPS.png') center top  no-repeat  ;
            background-size: contain;
           
            margin:auto}
+
+
+.container{width:100% ; 
+           height:100vh;
+           max-width: 1140px; 
+           background:rgba(123,234,123,.4);
+            margin:auto}
+.container img{margin:10px;
+                width:15%;
+                min-width:100px;
+                height:auto;
+                overflow: hidden}
+.header{width:100%;height:70px;background:#d71921}
+
+.logo{width:80%;height:90%;background:black}
+.social{}
