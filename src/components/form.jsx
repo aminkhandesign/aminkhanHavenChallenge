@@ -24,7 +24,6 @@ class Form extends Component {
     }
 
     handleChange(event) {
-        console.log(event.target.name);
         let val = event.target.value;
       
         this.setState({[event.target.name]:val})
@@ -77,13 +76,13 @@ class Form extends Component {
               </div>  
               <div className="checkboxContainer">
               <div className="flex_checkbox">
-             <input type="checkbox" className="check" checked={this.state.rules}/><label>I agree to the <span onClick={(event)=>{this.setState({modal:"modal_on"})}} className="rules">offical rules</span></label>
+             <input type="checkbox"  className="check" checked={`${this.state.rules}`}  onChange={event=>this.setState(prevState=>({rules:!prevState}))}/><label>I agree to the <span onClick={(event)=>{this.setState({modal:"modal_on"})}} className="rules">offical rules</span></label>
                </div> 
              <div className="flex_checkbox">
-             <input type="checkbox" className="check" checked={this.state.offers}/><label>Yes, I would like to receives special offers from GNC<span>*</span></label>
+             <input type="checkbox" className="check" checked={`${this.state.offers}`} onChange={event=>this.setState(prevState=>({offers:!prevState}))} /><label>Yes, I would like to receives special offers from GNC<span>*</span></label>
             </div>
              <div className="flex_checkbox">
-             <input type="checkbox" className="check" checked={this.state.info}/><label>Yes, I would lik econcert information from Live Nation</label>
+             <input type="checkbox" className="check" checked={`${this.state.info}`} onChange={event=>this.setState(prevState=>({info:!prevState}))}/><label>Yes, I would lik econcert information from Live Nation</label>
              </div>
 
              </div>
