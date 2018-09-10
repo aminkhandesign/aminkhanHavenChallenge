@@ -54,15 +54,29 @@ class Form extends Component {
                 <div className="inputContainer">
                     <label>PHONE NUMBER</label>
                     <div className="numbers">
-                        <input type="number" value={this.state.dig1}/>
-                        <input type="number" value={this.state.dig2}/>
-                        <input type="number" value={this.state.dig3}/>
+                        <input type="tel" minlength="3" maxlength="3" className="inputNumber" value={this.state.dig1}/>
+                        <input type="tel" min="100" max="999" className="inputNumber" value={this.state.dig2}/>
+                        <input type="tel" min="1000" max="9999" className="inputNumber" value={this.state.dig3}/>
                     </div>
                 </div>
                 <div className="filler"></div>
               </div>  
-            
+              <div className="checkboxContainer">
+              <div className="flex_checkbox">
+             <input type="checkbox" className="check"/><label>I agree to the <span className="rules">offical rules</span></label>
+               </div> 
+             <div className="flex_checkbox">
+             <input type="checkbox" className="check"/><label>Yes, I would like to receives special offers from GNC<span>*</span></label>
+            </div>
+             <div className="flex_checkbox">
+             <input type="checkbox" className="check"/><label>Yes, I would lik econcert information from Live Nation</label>
+             </div>
 
+             </div>
+             <div className="formBottom">
+        <img src="../images/form/capthca.png" />
+        <input type="submit" className="submitForm" value="ENTER NOW"/>
+        </div>
         </form>
         )
     }
