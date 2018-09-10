@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from './header.jsx';
 import Left from './left.jsx';
 import Form from './form.jsx';
+import Footer from './footer.jsx';
 
 
 class Container extends Component {
@@ -13,10 +14,11 @@ class Container extends Component {
         return (
             <div className="container">
             <Header />
-            <div class="flex">
+            <div className="flex">
                 <Left />
                 <Form />
             </div>
+            <Footer classsName="footer"/>
             </div>
         )
     }

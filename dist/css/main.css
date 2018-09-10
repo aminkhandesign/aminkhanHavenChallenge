@@ -7,13 +7,19 @@
         font-family:mocha;
         src:url('../fonts/MochaMattari.ttf')
 }
+
+@font-face{
+        font-family:helvetica;
+        src:url('../fonts/Helvetica/Helvetica-Light.ttf')
+}
 *{margin:0px;box-sizing: border-box;list-style: none;font-family:dinbold;}
 
 body{background:lightgray}
 
 .background{width:100%;
            max-width: 1600px;
-           height:2000px; 
+           height:auto; 
+           padding-bottom:100px;
            background: black url('../images/background_elements/combinedPS.png') center top  no-repeat  ;
            background-size: contain;
           
@@ -51,7 +57,10 @@ body{background:lightgray}
 
 .prizes{font-family:dinbold;font-size:2rem;position:relative;top:-40px;left:-50px;}
 .prizes li{font-size:1.5rem}
-li img{width:20px}
+.listItem{width:25px;height:25px;background-size: contain;display: inline-block;margin-right:10px}
+#ticket{background-image: url("../images/left_box/ticketNew.png") }
+#tplane{background-image: url("../images/left_box/planeNew.png") }
+#tplane{background-image: url("../images/left_box/dollarNew.png") }
 .flex{display:flex;flex-direction: row;padding:5px;justify-content: space-around;margin-top:20px;}
 .flex_checkbox{display:flex;flex-direction: row;padding:5px;justify-content: flex-start;}
 
@@ -93,3 +102,6 @@ input[type=checkbox]:checked{width:20px;height:20px;border:1px solid black;backg
 .form img{width:60%}
 
 /* end form  */
+
+.footer{position:absolute; bottom:0px;color:#8c8e90;margin-top:50px;font-family: helvetica;font-size:14px;}
+.modal{display: none}
