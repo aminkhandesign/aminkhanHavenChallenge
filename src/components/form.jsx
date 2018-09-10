@@ -1,6 +1,15 @@
 import React,{Component} from 'react';
 
 
+import Select from 'react-select';
+
+const options = [
+    {value:"losangeles",label:"Los Angeles"},
+    {value:"san bernadino", label:"San Bernadino"},
+    {value:"long beach",label:"Long Beach"},
+    {value:"santabarbara",label:"Santa Barbara"},
+    {value:"orange county",value:"Orange County"},
+]
 
 class Form extends Component {
 
@@ -19,9 +28,15 @@ class Form extends Component {
                     offers:false,
                     info:false,
                     modal:"modal_off",
+                    selectedOption:null,
                     }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSelect = this.handleSelect.bind(this);
     }
+    handleSelect(selectedOption) {
+        this.setState({ selectedOption });
+        console.log(`Option selected:`, selectedOption);
+      }
 
     handleChange(event) {
         let val = event.target.value;
@@ -55,7 +70,7 @@ class Form extends Component {
             <div className="flex">
                 <div className="inputContainer">
                     <label>SELECT METRO AREA</label>
-                    <input name="metro" type="select" value={this.state.metro} />
+                    <Select id="select" onChange={this.handleSelect} options={options}/>
 
                 </div>
                 <div className="inputContainer">
