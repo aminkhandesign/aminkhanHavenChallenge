@@ -14,7 +14,7 @@ class Container extends Component {
         return (
             <div className="container">
             <Header />
-            <div className="flex">
+            <div className="flex_container">
                 <Left />
                 <Form />
             </div>

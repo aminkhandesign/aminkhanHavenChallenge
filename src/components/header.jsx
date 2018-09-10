@@ -10,7 +10,14 @@ class Header extends Component {
                     <img src="./images/header/gnc_2014.svg" />
                     <img src="./images/header/livenationconcerts.png" />
                 </div>
-                <div className="social"></div>
+                <div className="social">
+                <div id="share" className="icon">
+                SHARE
+                </div>
+                <div id="fb" className="icon"></div>
+                <div id="twitter" className="icon"></div>
+                
+                </div>
             </div>
         )
     }
