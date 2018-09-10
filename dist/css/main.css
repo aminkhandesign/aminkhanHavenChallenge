@@ -132,7 +132,7 @@ input[type=checkbox]:checked::before{content:"✔";position:relative;left:-10px;
 .formBottom{width:100%;position: relative}
 .rules{color:#d71921;cursor: pointer}
 
-#select{border:2px solid black}
+#select{border:2px solid black;font-size:1.7rem;}
 .submitForm{background:url(../images/form/ribbon.svg) no-repeat;
            width:210px;height:100px;border:none;overflow: visible;color:white;
            font-size:3rem;
